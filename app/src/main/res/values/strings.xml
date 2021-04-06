@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Circle_BrowseTherapists</string>
+
+    <string-array name="therapist_profiles">
+        <item>Amber Bailey</item>
+        <item>Shawndel Springer</item>
+        <item>Bob Stead</item>
+        <item>Stephen Garcia</item>
+        <item>Deborah Lane</item>
+        <item>April Boreham</item>
+        <item>George Cox</item>
+        <item>Ashley Logan</item>
+        <item>Richard Walla</item>
+        <item>Sandy Zamora</item>
+    </string-array>
+
+    <string-array name="therapist_descriptions">
+        <item>Licensed Professional Counselor, MS, LPC</item>
+        <item>Licensed Professional Counselor, MS, LPC</item>
+        <item>Licensed Professional Counselor, MS, LPC</item>
+        <item>Licensed Professional Counselor, MS, LPC</item>
+        <item>Licensed Professional Counselor, MS, LPC</item>
+        <item>Licensed Professional Counselor, MS, LPC</item>
+        <item>Licensed Professional Counselor, MS, LPC</item>
+        <item>Licensed Professional Counselor, MS, LPC</item>
+        <item>Licensed Professional Counselor, MS, LPC</item>
+        <item>Licensed Professional Counselor, MS, LPC</item>
+
+    </string-array>
+
+</resources>
