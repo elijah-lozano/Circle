@@ -1,6 +1,7 @@
 package com.example.circle_browsetherapists;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -32,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         s2 = getResources().getStringArray(R.array.therapist_descriptions);
 
         TherapistsAdapter therapistsAdapter = new TherapistsAdapter(this, s1, s2, images);
-
+        recyclerView.setAdapter(therapistsAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
 }
