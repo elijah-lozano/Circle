@@ -1,4 +1,4 @@
-package com.example.circle_browsetherapists;
+package com.example.circle;
 
 import org.junit.Test;
 

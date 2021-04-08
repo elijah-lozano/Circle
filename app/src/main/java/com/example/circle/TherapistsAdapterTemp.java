@@ -1,4 +1,4 @@
-package com.example.circle_browsetherapists;
+package com.example.circle;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,13 +10,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class TherapistsAdapter extends RecyclerView.Adapter<TherapistsAdapter.therapistViewHolder> {
+public class TherapistsAdapterTemp extends RecyclerView.Adapter<TherapistsAdapterTemp.therapistViewHolder> {
 
     String therapistNames[], therapistDescs[];
     int therapistImages[];
     Context context;
 
-    public TherapistsAdapter(Context ct, String s1[], String s2[], int images[]){
+    public TherapistsAdapterTemp(Context ct, String s1[], String s2[], int images[]){
         context = ct;
         therapistNames = s1;
         therapistDescs = s2;

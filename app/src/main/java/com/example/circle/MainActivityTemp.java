@@ -1,12 +1,12 @@
-package com.example.circle_browsetherapists;
+package com.example.circle;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivityTemp extends AppCompatActivity {
 
     RecyclerView recyclerView;
 
@@ -25,15 +25,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.recycler_view);
 
         recyclerView = findViewById(R.id.recyclerView);
 
         s1 = getResources().getStringArray(R.array.therapist_profiles);
         s2 = getResources().getStringArray(R.array.therapist_descriptions);
 
-        TherapistsAdapter therapistsAdapter = new TherapistsAdapter(this, s1, s2, images);
-        recyclerView.setAdapter(therapistsAdapter);
+        TherapistsAdapterTemp therapistsAdapterTemp = new TherapistsAdapterTemp(this, s1, s2, images);
+        recyclerView.setAdapter(therapistsAdapterTemp);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }

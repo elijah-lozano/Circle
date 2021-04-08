@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.circle.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_courses"
+        android:name="com.example.circle.ui.courses.CoursesFragment"
+        android:label="@string/title_courses"
+        tools:layout="@layout/fragment_courses" />
+
+    <fragment
+        android:id="@+id/navigation_therapists"
+        android:name="com.example.circle.ui.therapists.TherapistsFragment"
+        android:label="@string/title_therapists"
+        tools:layout="@layout/fragment_therapists" />
+
+
+    <fragment
+        android:id="@+id/navigation_chat_rooms"
+        android:name="com.example.circle.ui.chatRooms.ChatRoomsFragment"
+        android:label="@string/title_chat_rooms"
+        tools:layout="@layout/fragment_chat_rooms" />
+</navigation>

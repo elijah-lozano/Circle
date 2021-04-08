@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">Circle_BrowseTherapists</string>
+    <string name="app_name">Circle</string>
+    <string name="title_home">Home</string>
+    <string name="title_courses">Courses</string>
+    <string name="title_therapists">Therapists</string>
+    <string name="title_chat_rooms">Chat Rooms</string>
 
     <string-array name="therapist_profiles">
         <item>Amber Bailey</item>
