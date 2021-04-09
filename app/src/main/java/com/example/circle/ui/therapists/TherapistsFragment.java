@@ -4,18 +4,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.circle.R;
-import com.example.circle.TherapistsAdapterTemp;
+import com.example.circle.TherapistsAdapter;
 
 public class TherapistsFragment extends Fragment {
 
@@ -37,14 +33,15 @@ public class TherapistsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.recycler_view, container, false);
+        View view = inflater.inflate(R.layout.fragment_therapists, container, false);
 
-        recyclerView = view.findViewById(R.id.therapists_recyclerView);
+        recyclerView = (RecyclerView) view.findViewById(R.id.therapists_recyclerView);
+        recyclerView.setNestedScrollingEnabled(false);
 
         s1 = getResources().getStringArray(R.array.therapist_profiles);
         s2 = getResources().getStringArray(R.array.therapist_descriptions);
 
-        TherapistsAdapterTemp therapistsAdapterTemp = new TherapistsAdapterTemp(getContext(), s1, s2, images);
+        TherapistsAdapter therapistsAdapterTemp = new TherapistsAdapter(getContext(), s1, s2, images);
         recyclerView.setAdapter(therapistsAdapterTemp);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
