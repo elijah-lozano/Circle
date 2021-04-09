@@ -27,7 +27,7 @@ public class MainActivityTemp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycler_view);
 
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.therapists_recyclerView);
 
         s1 = getResources().getStringArray(R.array.therapist_profiles);
         s2 = getResources().getStringArray(R.array.therapist_descriptions);
