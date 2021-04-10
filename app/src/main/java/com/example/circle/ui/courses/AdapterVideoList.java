@@ -1,6 +1,7 @@
 package com.example.circle.ui.courses;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,10 +38,23 @@ public class AdapterVideoList extends RecyclerView.Adapter<AdapterVideoList.Vide
 
     @Override
     public void onBindViewHolder(@NonNull AdapterVideoList.VideoViewHolder holder, int position) {
-        ModelVideo item = videosList.get(position);
+        final ModelVideo item = videosList.get(position);
         holder.tv_title.setText(item.getTitle());
         holder.tv_duration.setText(item.getDuration());
         Glide.with(context).load(item.getData()).into(holder.imgView_thumbnail);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), Activity_Player.class);
+                intent.putExtra("videoId", item.getId());
+                v.getContext().startActivity(intent);
+            }
+
+        });
+
+
     }
 
     @Override
