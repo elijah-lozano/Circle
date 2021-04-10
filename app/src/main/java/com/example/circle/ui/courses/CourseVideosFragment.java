@@ -9,6 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -31,6 +32,7 @@ public class CourseVideosFragment extends Fragment {
 
     private ArrayList<ModelVideo> videosList = new ArrayList<ModelVideo>();
     private AdapterVideoList adapterVideoList;
+    private RecyclerView recyclerView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,8 +41,6 @@ public class CourseVideosFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_course_videos, container, false);
 
         initializeViews(view);
-
-
         checkPermissions();
         // Inflate the layout for this fragment
         return view;
@@ -48,12 +48,12 @@ public class CourseVideosFragment extends Fragment {
 
 
     private void initializeViews(View view){
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerView_videos);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_videos);
 
 
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
         adapterVideoList = new AdapterVideoList(getContext(), videosList);
         recyclerView.setAdapter(adapterVideoList);
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
 
     }
 
@@ -87,12 +87,13 @@ public class CourseVideosFragment extends Fragment {
 
     private void loadVideos(){
             new Thread(){
+
                 @Override
                 public void run() {
                     super.run();
 
                     String[] projection  = {MediaStore.Video.Media._ID, MediaStore.Video.Media.DISPLAY_NAME, MediaStore.Video.Media.DURATION};
-                    String sortOrder = MediaStore.Video.Media.DATE_ADDED + "DESC";
+                    String sortOrder = MediaStore.Video.Media.DATE_ADDED + " DESC";
 
                     Cursor cursor = getActivity().getApplication().getContentResolver().query(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, projection, null, null, sortOrder);
                     if(cursor!=null){
@@ -123,7 +124,7 @@ public class CourseVideosFragment extends Fragment {
                             getActivity().runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    adapterVideoList.notifyItemInserted(videosList.size()-1);
+                                    adapterVideoList.notifyItemChanged(videosList.size()-1);
                                 }
                             });
 
