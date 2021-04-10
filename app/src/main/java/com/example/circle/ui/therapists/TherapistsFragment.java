@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.circle.R;
-import com.example.circle.TherapistsAdapter;
 
 public class TherapistsFragment extends Fragment {
 
