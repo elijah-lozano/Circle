@@ -23,7 +23,6 @@
         android:label="@string/title_therapists"
         tools:layout="@layout/fragment_therapists" />
 
-
     <fragment
         android:id="@+id/navigation_chat_rooms"
         android:name="com.example.circle.ui.chatRooms.ChatRoomsFragment"
