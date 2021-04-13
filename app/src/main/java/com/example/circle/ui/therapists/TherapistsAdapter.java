@@ -4,10 +4,12 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.circle.R;
@@ -17,6 +19,7 @@ public class TherapistsAdapter extends RecyclerView.Adapter<TherapistsAdapter.th
     String therapistNames[], therapistDescs[];
     int therapistImages[];
     Context context;
+    Button reqButton;
 
     public TherapistsAdapter(Context ct, String s1[], String s2[], int images[]){
         context = ct;
@@ -59,6 +62,14 @@ public class TherapistsAdapter extends RecyclerView.Adapter<TherapistsAdapter.th
             nameTextView = itemView.findViewById(R.id.therapist_name_txt);
             descTextView = itemView.findViewById(R.id.therapist_desc_txt);
             therapistImg = itemView.findViewById(R.id.therapist_img_view);
+            reqButton = itemView.findViewById(R.id.req_button);
+
+            reqButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_navigation_therapists_to_scheduleTherapistFragment3);
+            }
+        });
         }
     }
 }
