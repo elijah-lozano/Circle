@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_courseVideosFragment">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -28,4 +28,9 @@
         android:name="com.example.circle.ui.chatRooms.ChatRoomsFragment"
         android:label="@string/title_chat_rooms"
         tools:layout="@layout/fragment_chat_rooms" />
+    <fragment
+        android:id="@+id/navigation_courseVideosFragment"
+        android:name="com.example.circle.ui.courses.CourseVideosFragment"
+        android:label="fragment_course_videos"
+        tools:layout="@layout/fragment_course_videos" />
 </navigation>

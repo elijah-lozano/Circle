@@ -1,1 +1,3 @@
 #Circle
+
+For course videos to WORK, you need to install the videos from the folder 'circle_course_videos' from the google Drive onto your emulator device https://drive.google.com/drive/u/0/folders/1LYZZJX5ArRW2DXtSPx1PIBDxMkC8-1Ab. to do this: https://www.youtube.com/watch?v=-TmU6sRHI8w (45 seconds). Just drag them onto the emulator and it'll download to the virtual SD card on it. Then, go to Files (on device) and move those video files to 'sdk_gphone_x86_arm' (or whatever your device is called)and NOT SD card. Then click 'videos' tab under the device title as mentioned and they should be there.  Then run the project. They should populate the page.
