@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Circle</string>
+    <string name="title_user_profile">User Profile</string>
     <string name="title_home">Home</string>
     <string name="title_courses">Courses</string>
     <string name="title_therapists">Therapists</string>
@@ -33,5 +34,25 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="profile">Profile</string>
+    <string name="back">Back</string>
+    <string name="menu">Menu</string>
+    <string name="about">About</string>
+    <string name="username">Joseph Reeves</string>
+    <string name="description">Hello my name is Joseph Reeves. I like watching TV and eating cereal. Taking some online classes right now for college.</string>
+    <string name="current_courses">Current courses:</string>
+    <string name="previous_courses">Previous courses:</string>
+
+    <!-- courses -->
+    <string name="course1">Manage Stress 1441</string>
+    <string name="course2">Confidence 1641</string>
+    <string name="course3">Reduce Anxiety 1472</string>
+    <string name="course4">Manage Time 1421</string>
+
+    <string name="course5">Manage Stress 1341</string>
+    <string name="course6">Confidence 1441</string>
+    <string name="course7">Reduce Anxiety 1272</string>
+    <string name="course8">Manage Time 1121</string>
 
 </resources>
