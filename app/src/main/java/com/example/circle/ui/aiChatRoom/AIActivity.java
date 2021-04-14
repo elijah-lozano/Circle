@@ -21,13 +21,14 @@ import com.example.circle.ui.aiChatRoom.ResponseMessage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class AIActivity extends AppCompatActivity {
 
     int i = 0;
     EditText userInput;
     RecyclerView recyclerView;
     List<ResponseMessage> responseMessageList;
     MessageAdapter messageAdapter;
+
     @RequiresApi(api = Build.VERSION_CODES.R)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.ai_chat_room);
         userInput = findViewById(R.id.userInput);
         recyclerView = findViewById(R.id.conversation);
+
         ArrayList<String> botResponseList = new  ArrayList<String>(
                 List.of("Hello! I am Bob the bot. What is your name?",
                         "Nice to meet you! How are you doing today?",
@@ -42,10 +44,12 @@ public class MainActivity extends AppCompatActivity {
                         "Unfortunately, I can't really react appropriately as I do not have a database. Sorry.",
                         "Maybe I will one day, Maybe I'll have a user dependent response.",
                         "Until then, I guess i'll just stay as a hardcoded response bot."));
+
         responseMessageList = new ArrayList<>();
         messageAdapter = new MessageAdapter(responseMessageList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(messageAdapter);
+
         userInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {

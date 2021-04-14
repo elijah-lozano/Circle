@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +29,7 @@ public class ChatroomFragmentAdapter extends RecyclerView.Adapter<ChatroomFragme
     Context context;
     String courseNames[], courseDescriptions[];
     int userImages[];
-    TabItem ti;
+
 
 
     public ChatroomFragmentAdapter(Context c, String s1[], String s2[],int images[]) {
@@ -49,7 +50,6 @@ public class ChatroomFragmentAdapter extends RecyclerView.Adapter<ChatroomFragme
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.chatroomName.setText(courseNames[position]);
         holder.chatroomDesc.setText(courseDescriptions[position]);
-        ti = holder.itemView.findViewById(R.id.label_ai_chat);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +58,7 @@ public class ChatroomFragmentAdapter extends RecyclerView.Adapter<ChatroomFragme
                 Navigation.findNavController(v).navigate(R.id.action_navigation_chat_rooms_to_chatFragment);
             }
         });
+
     }
 
     @Override
