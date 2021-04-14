@@ -14,14 +14,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
         <FrameLayout
             android:background="#FF0000"
             android:layout_width="4dp"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent">
+
+        </FrameLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="405dp"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp">
 
             <TextView
                 android:id="@+id/chatroom_title"
@@ -55,9 +66,25 @@
                 android:layout_width="87dp"
                 android:layout_height="82dp"
                 app:srcCompat="@drawable/meditate"
+                tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="4dp"
-                tools:layout_editor_absoluteY="2dp"
-                tools:ignore="MissingConstraints" />
+                tools:layout_editor_absoluteY="2dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/goToChat"
+            android:layout_width="197dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Chat" />
+
+        <Button
+            android:id="@+id/goToAi"
+            android:layout_width="198dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginLeft="200dp"
+            android:text="AI" />
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

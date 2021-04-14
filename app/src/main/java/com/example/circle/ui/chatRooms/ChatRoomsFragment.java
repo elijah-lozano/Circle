@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -30,7 +31,9 @@ import com.example.circle.R;
 import com.example.circle.ui.chatRooms.chats.ChatFragment;
 import com.example.circle.ui.courses.CoursesFragmentAdapter;
 
-public class ChatRoomsFragment extends Fragment {
+public class ChatRoomsFragment extends Fragment implements View.OnClickListener {
+    Button goToChat;
+    Button goToAi;
 
     String s1[], s2[];
 
@@ -45,8 +48,20 @@ public class ChatRoomsFragment extends Fragment {
         s1 = new String[]{"Meditation"};
         s2 = new String[]{"Chatroom for meditation"};
 
+        goToChat = root.findViewById(R.id.goToChat);
+        goToChat.setOnClickListener(this);
+
+        goToAi = root.findViewById(R.id.goToAi);
+        goToAi.setOnClickListener(this);
+
         ChatroomFragmentAdapter therapistsAdapterTemp = new ChatroomFragmentAdapter(this.getActivity(),s1,s2,images);
         rv.setAdapter(therapistsAdapterTemp);
         return root;
+    }
+
+    @Override
+    public void onClick(View view) {
+        Navigation.findNavController(view).navigate(R.id.action_chatRoomsFragment_to_AI_CHAT_PLACEHOLDER);
+        Navigation.findNavController(view).navigate(R.id.action_chatRoomsFragment_to_chatFragment);
     }
 }
