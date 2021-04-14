@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.circle.R;
@@ -49,9 +50,10 @@ public class ChatroomFragmentAdapter extends RecyclerView.Adapter<ChatroomFragme
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Joined chatroom : " + courseNames[position], Toast.LENGTH_SHORT).show();
-                AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                ChatFragment chatfrag = new ChatFragment();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec,chatfrag).commit();
+                //AppCompatActivity activity = (AppCompatActivity)v.getContext();
+                //ChatFragment chatfrag = new ChatFragment();
+                //activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec,chatfrag).commit();
+                Navigation.findNavController(v).navigate(R.id.action_navigation_chat_rooms_to_chatFragment);
             }
         });
     }
