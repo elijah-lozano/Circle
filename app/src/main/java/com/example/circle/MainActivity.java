@@ -2,29 +2,33 @@ package com.example.circle;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.viewpager.widget.ViewPager;
 
+import com.example.circle.ui.aiChatRoom.AIChatroomFragment;
+import com.example.circle.ui.chatRooms.ChatRoomsFragment;
 import com.example.circle.ui.chatRooms.chats.ChatFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-
-        //fragmentTransaction.add(R.id.fragment_container, new ChatFragment());
-        //fragmentTransaction.commit();
-
         BottomNavigationView navView = findViewById(R.id.nav_view);
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
