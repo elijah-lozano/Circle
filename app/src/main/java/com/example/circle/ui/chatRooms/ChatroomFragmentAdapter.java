@@ -20,14 +20,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.circle.R;
 import com.example.circle.ui.chatRooms.chats.ChatFragment;
 import com.example.circle.ui.chatRooms.ChatRoomsFragment;
+import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
 
 public class ChatroomFragmentAdapter extends RecyclerView.Adapter<ChatroomFragmentAdapter.ViewHolder> {
-
-
 
     Context context;
     String courseNames[], courseDescriptions[];
     int userImages[];
+    TabItem ti;
+
+
     public ChatroomFragmentAdapter(Context c, String s1[], String s2[],int images[]) {
         context = c;
         courseNames = s1;
@@ -46,13 +49,12 @@ public class ChatroomFragmentAdapter extends RecyclerView.Adapter<ChatroomFragme
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.chatroomName.setText(courseNames[position]);
         holder.chatroomDesc.setText(courseDescriptions[position]);
+        ti = holder.itemView.findViewById(R.id.label_ai_chat);
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Joined chatroom : " + courseNames[position], Toast.LENGTH_SHORT).show();
-                //AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                //ChatFragment chatfrag = new ChatFragment();
-                //activity.getSupportFragmentManager().beginTransaction().replace(R.id.rec,chatfrag).commit();
                 Navigation.findNavController(v).navigate(R.id.action_navigation_chat_rooms_to_chatFragment);
             }
         });

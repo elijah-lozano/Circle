@@ -42,9 +42,8 @@ public class ChatRoomsFragment extends Fragment {
         RecyclerView rv = (RecyclerView) root.findViewById(R.id.chatroom_recyclerView);
         rv.setLayoutManager(new LinearLayoutManager(this.getActivity()));
         int images[] = {R.drawable.meditate,};
-        //s1 = new String[]{"Meditation"};
         s1 = getResources().getStringArray(R.array.chatroom_subjects);
-        //s2 = new String[]{"Chatroom for meditation"};
+       
         s2 = getResources().getStringArray(R.array.chatroom_descs);
 
         ChatroomFragmentAdapter chatroomFragmentAdapter = new ChatroomFragmentAdapter(getContext(),s1,s2,images);
