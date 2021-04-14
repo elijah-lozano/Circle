@@ -32,6 +32,34 @@
         <item>Licensed Professional Counselor, MS, LPC</item>
 
     </string-array>
+
+    <string-array name="chatroom_subjects">
+        <item>Meditation</item>
+        <item>Anxiety</item>
+        <item>Depression</item>
+        <item>COVID-19</item>
+        <item>Loneliness</item>
+        <item>Stress</item>
+        <item>Gratitude</item>
+        <item>Digital Wellness</item>
+        <item>Relationships</item>
+        <item>Suicide</item>
+    </string-array>
+
+    <string-array name="chatroom_descs">
+        <item>Chatroom for meditation</item>
+        <item>Chatroom for anxiety</item>
+        <item>Chatroom for depression</item>
+        <item>Chatroom for COVID-19</item>
+        <item>Chatroom for loneliness</item>
+
+        <item>Chatroom for stress</item>
+        <item>Chatroom for being grateful</item>
+        <item>Chatroom for digital wellness</item>
+        <item>Chatroom for relationships</item>
+        <item>Chatroom for suicide prevention</item>
+    </string-array>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

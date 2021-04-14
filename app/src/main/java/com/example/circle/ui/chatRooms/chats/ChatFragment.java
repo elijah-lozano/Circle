@@ -30,7 +30,7 @@ public class ChatFragment extends Fragment {
         s1 = new String[]{"Jane Doe", "John Doe"};
         s2 = new String[]{"This is the chatroom for meditation!", "Interact with others who are open to share!"};
 
-        ChatFragmentAdapter chatFragmentAdapterTemp = new ChatFragmentAdapter(this.getActivity(),s1,s2,images);
+        ChatFragmentAdapter chatFragmentAdapterTemp = new ChatFragmentAdapter(getContext(),s1,s2,images);
         rv.setAdapter(chatFragmentAdapterTemp);
         return root;
     }
